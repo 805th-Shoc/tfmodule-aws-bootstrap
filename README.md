@@ -19,7 +19,7 @@ Terraform 0.12. Pin module version to v0.1.4. Submit pull-requests to terraform0
 
 ```hcl
 module "bootstrap" {
-  source = "trussworks/bootstrap/aws"
+  source = "git::https://github.com/805th-Shoc/tfmodule-aws-bootstrap.git"
 
   region        = "us-west-2"
   account_alias = "<ORG>-<NAME>"
