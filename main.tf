@@ -13,7 +13,7 @@ resource "aws_iam_account_alias" "alias" {
 }
 
 module "terraform_state_bucket" {
-  source  = "../modules/aws/aws-s3-private-bucket"
+  source  = "git::https://github.com/805th-Shoc/tfmodule-aws-s3-private-bucket.git"
   version = "~> 4.2.0"
 
   bucket         = local.state_bucket
@@ -34,7 +34,7 @@ module "terraform_state_bucket" {
 #
 
 module "terraform_state_bucket_logs" {
-  source  = "../modules/aws/aws-logs"
+  source  = "git::https://github.com/805th-Shoc/tfmodule-aws-logs.git"
   version = "~> 14.2.0"
 
   s3_bucket_name          = local.logging_bucket
